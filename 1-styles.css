@@ -1,0 +1,28 @@
+:root {
+  --transition-duration: 0.7s;
+  --transition-cubic-bezier: cubic-bezier(0.17, 0.67, 0, 1.01);
+}
+
+h2 {
+  font-size: 3rem;
+}
+h2 a {
+  color: #eb0045;
+  position: relative;
+  text-decoration: none;
+}
+
+h2 a::before {
+  content: "";
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 0.25rem;
+  position: absolute;
+  background-color: #88194d;
+  transition: var(--transition-duration) var(--transition-cubic-bezier);
+}
+
+h2 a:hover::before {
+  width: 100%;
+}

@@ -1,0 +1,42 @@
+:root {
+  --sprite-height: 375px;
+  --sprite-width: 860px;
+}
+
+ul {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul li {
+  border-radius: 5%;
+  font-size: 2.4rem;
+  font-weight: bold;
+  list-style: none;
+  padding: 25px 0 35px 0;
+  position: relative;
+  text-align: center;
+  border: 1px solid grey;
+  background-color: #f7f7f7;
+  height: var(--sprite-height);
+  width: calc(var(--sprite-width) / 3);
+}
+
+.icon {
+  top: 12%;
+  display: block;
+  position: absolute;
+  height: var(--sprite-height);
+  transform: scale(0.8);
+  width: calc(var(--sprite-width) / 3);
+  background-image: url("./0-sprite.png");
+}
+
+.icon.i-js {
+  background-position: calc(var(--sprite-width) / 3);
+}
+
+.icon.i-css {
+  background-position: calc(var(--sprite-width) / 1.5);
+}
